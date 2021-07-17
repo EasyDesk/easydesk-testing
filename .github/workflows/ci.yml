@@ -30,6 +30,12 @@ jobs:
       - id: release-info
         name: Get release info
         run: |
+          echo "is-semver: ${{ steps.get-version.outputs.is-semver }}"
+          echo "is-semver == true: ${{ steps.get-version.outputs.is-semver == true }}"
+          echo "is-semver == 'true': ${{ steps.get-version.outputs.is-semver == 'true' }}"
+          echo "github.ref: ${{ github.ref }}"
+          echo "starts with: ${{ startsWith(github.ref, 'refs/tags/v') }}"
+
           SHOULD_RELEASE=${{ startsWith(github.ref, 'refs/tags/v') && steps.get-version.outputs.is-semver == true }}
           PRERELEASE=${{ steps.get-version.outputs.prerelease != '' || startsWith(steps.get-version.outputs.version-without-v, '0.') }}
           if [ ${SHOULD_RELEASE} == true ]; then
@@ -102,4 +108,3 @@ jobs:
           dotnet-version: ${{ env.DOTNET_VERSION }}
       - name: NuGet Release
         run: dotnet nuget push ${{ env.OUTPUT_DIR }}/*.nupkg -k ${{ secrets.NUGET_API_KEY }} -s ${{ env.NUGET_URL }}
-
