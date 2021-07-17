@@ -70,7 +70,7 @@ jobs:
           name: nuget-package
           path: ${{ env.OUTPUT_DIR }}
   release:
-    if: ${{ needs.release-checks.outputs.should-release == 'true' }}
+    if: ${{ needs.release-checks.outputs.should-release }}
     name: Release
     environment: release
     concurrency: release
