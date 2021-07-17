@@ -74,7 +74,7 @@ jobs:
     name: Release
     environment: release
     concurrency: release
-    needs: [release-checks, build_and_test]
+    needs: [release-checks, build]
     runs-on: ubuntu-20.04
     steps:
       - name: Checkout
