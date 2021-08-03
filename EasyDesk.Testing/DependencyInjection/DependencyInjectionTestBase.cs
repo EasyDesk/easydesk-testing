@@ -21,6 +21,10 @@ namespace EasyDesk.Testing.DependencyInjection
 
         protected T Service<T>() => ServiceProvider.GetRequiredService<T>();
 
-        public void Dispose() => _serviceScope.Dispose();
+        public void Dispose()
+        {
+            _serviceScope.Dispose();
+            GC.SuppressFinalize(this);
+        }
     }
 }
