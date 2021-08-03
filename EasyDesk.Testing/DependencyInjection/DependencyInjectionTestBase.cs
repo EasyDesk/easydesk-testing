@@ -3,19 +3,24 @@ using System;
 
 namespace EasyDesk.Testing.DependencyInjection
 {
-    public abstract class DependencyInjectionTestBase
+    public abstract class DependencyInjectionTestBase : IDisposable
     {
-        private readonly IServiceProvider _serviceProvider;
+        private readonly IServiceScope _serviceScope;
 
         public DependencyInjectionTestBase()
         {
             var container = new ServiceCollection();
             ConfigureServices(container);
-            _serviceProvider = container.BuildServiceProvider();
+            var provider = container.BuildServiceProvider();
+            _serviceScope = provider.CreateScope();
         }
+
+        protected IServiceProvider ServiceProvider => _serviceScope.ServiceProvider;
 
         protected abstract void ConfigureServices(IServiceCollection services);
 
-        protected T Service<T>() => _serviceProvider.GetRequiredService<T>();
+        protected T Service<T>() => ServiceProvider.GetRequiredService<T>();
+
+        public void Dispose() => _serviceScope.Dispose();
     }
 }
