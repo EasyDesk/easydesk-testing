@@ -62,6 +62,8 @@ jobs:
         run: dotnet restore
       - name: Build
         run: dotnet build --no-restore -c ${{ env.BUILD_CONFIGURATION }}
+      - name: Run unit tests
+        run: dotnet test --no-build -c ${{ env.BUILD_CONFIGURATION }}
       - name: Create Nuget package for release
         run: dotnet pack ${{ env.PROJECT_DIR }} --no-build -o ${{ env.OUTPUT_DIR }} -c ${{ env.BUILD_CONFIGURATION }} -p:Version=${{ needs.release-checks.outputs.version }}
       - name: Upload Artifacts
