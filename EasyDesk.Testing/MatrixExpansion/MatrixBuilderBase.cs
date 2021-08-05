@@ -6,7 +6,7 @@ using System.Linq;
 
 namespace EasyDesk.Testing.MatrixExpansion
 {
-    public delegate IEnumerable Expansion(IImmutableList<object> currentParams);
+    public delegate IEnumerable Expansion(IEnumerable<object> currentParams);
 
     public abstract class MatrixBuilderBase<T, TBuilder>
         where TBuilder : MatrixBuilderBase<T, TBuilder>
@@ -18,7 +18,7 @@ namespace EasyDesk.Testing.MatrixExpansion
             _expansions = expansions;
         }
 
-        private T ConvertToTuple(IImmutableList<object> paramList)
+        private T ConvertToTuple(IEnumerable<object> paramList)
         {
             var enumerator = paramList.GetEnumerator();
             object Next()
@@ -41,11 +41,11 @@ namespace EasyDesk.Testing.MatrixExpansion
             return this as TBuilder;
         }
 
-        private IEnumerable FilteredExpansion(IImmutableList<object> currentParams, Expansion expansion, Func<T, bool> predicate)
+        private IEnumerable FilteredExpansion(IEnumerable<object> currentParams, Expansion expansion, Func<T, bool> predicate)
         {
             foreach (var p in expansion(currentParams))
             {
-                var tuple = ConvertToTuple(currentParams.Add(p));
+                var tuple = ConvertToTuple(currentParams.Append(p));
                 if (predicate(tuple))
                 {
                     yield return p;
@@ -56,28 +56,28 @@ namespace EasyDesk.Testing.MatrixExpansion
         public IEnumerable<object[]> Build()
         {
             var result = new List<object[]>();
-            var stack = new Stack<object>();
+            var stack = new List<object>();
 
             BuildResult(_expansions.ToArray(), stack, result);
 
             return result;
         }
 
-        private void BuildResult(Expansion[] expansions, Stack<object> currentParams, List<object[]> result)
+        private void BuildResult(Expansion[] expansions, List<object> currentParams, List<object[]> result)
         {
             if (currentParams.Count == expansions.Length)
             {
-                result.Add(currentParams.Reverse().ToArray());
+                result.Add(currentParams.ToArray());
                 return;
             }
             var expansionIndex = expansions.Length - currentParams.Count - 1;
             var expansion = expansions[expansionIndex];
-            var nextParams = expansion(currentParams.ToImmutableList());
+            var nextParams = expansion(currentParams);
             foreach (var param in nextParams)
             {
-                currentParams.Push(param);
+                currentParams.Add(param);
                 BuildResult(expansions, currentParams, result);
-                currentParams.Pop();
+                currentParams.RemoveAt(currentParams.Count - 1);
             }
         }
     }
