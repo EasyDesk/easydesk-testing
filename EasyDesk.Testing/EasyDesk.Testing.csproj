@@ -8,6 +8,11 @@
     <RepositoryUrl>https://github.com/EasyDesk/easydesk-testing</RepositoryUrl>
   </PropertyGroup>
 
+  <PropertyGroup>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+  </PropertyGroup>
+
   <ItemGroup>
     <PackageReference Include="EasyDesk.Tools" Version="1.1.0" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="5.0.2" />
