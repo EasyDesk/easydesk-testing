@@ -9,9 +9,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
 		.github\workflows\ci.yml = .github\workflows\ci.yml
+		Directory.Build.props = Directory.Build.props
+		Linter.targets = Linter.targets
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyDesk.Testing.UnitTests", "EasyDesk.Testing.UnitTests\EasyDesk.Testing.UnitTests.csproj", "{A9E00845-3166-4192-8215-3010B15338D7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EasyDesk.Testing.UnitTests", "EasyDesk.Testing.UnitTests\EasyDesk.Testing.UnitTests.csproj", "{A9E00845-3166-4192-8215-3010B15338D7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{F143CB80-0DDF-42FD-BCAE-DB1B5DCFCDF5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{455A5B74-E264-4210-925B-E45A9AF4248C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -30,6 +36,10 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D7DD7340-394E-426B-B9B9-6D27A0F32B92} = {F143CB80-0DDF-42FD-BCAE-DB1B5DCFCDF5}
+		{A9E00845-3166-4192-8215-3010B15338D7} = {455A5B74-E264-4210-925B-E45A9AF4248C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {109C983C-D837-4F05-98DF-FD3E80FFF4A1}
