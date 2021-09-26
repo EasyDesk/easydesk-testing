@@ -23,11 +23,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\EasyDesk.Testing\EasyDesk.Testing.csproj" />
+    <ProjectReference Include="..\..\src\EasyDesk.Testing\EasyDesk.Testing.csproj" />
   </ItemGroup>
 
   <PropertyGroup>
-    <RootFolder>..</RootFolder>
+    <RootFolder>..\..</RootFolder>
   </PropertyGroup>
 
 </Project>
