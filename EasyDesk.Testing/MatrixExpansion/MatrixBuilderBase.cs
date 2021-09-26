@@ -11,7 +11,7 @@ namespace EasyDesk.Testing.MatrixExpansion
     public abstract class MatrixBuilderBase<T, TBuilder>
         where TBuilder : MatrixBuilderBase<T, TBuilder>
     {
-        protected IImmutableStack<Expansion> _expansions;
+        private IImmutableStack<Expansion> _expansions;
 
         public MatrixBuilderBase(IImmutableStack<Expansion> expansions)
         {

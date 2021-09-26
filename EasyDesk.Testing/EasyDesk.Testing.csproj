@@ -27,4 +27,8 @@
     <PackageReference Include="NSubstitute" Version="4.2.2" />
   </ItemGroup>
 
+  <PropertyGroup>
+    <RootFolder>..</RootFolder>
+  </PropertyGroup>
+
 </Project>

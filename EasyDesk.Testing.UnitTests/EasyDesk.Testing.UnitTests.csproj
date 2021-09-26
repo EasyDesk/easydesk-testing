@@ -26,4 +26,8 @@
     <ProjectReference Include="..\EasyDesk.Testing\EasyDesk.Testing.csproj" />
   </ItemGroup>
 
+  <PropertyGroup>
+    <RootFolder>..</RootFolder>
+  </PropertyGroup>
+
 </Project>
