@@ -7,10 +7,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EasyDesk.Testing", "src\Eas
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{34823B7C-200A-46FF-A6DD-DFD376A4F9FF}"
 	ProjectSection(SolutionItems) = preProject
-		.editorconfig = .editorconfig
 		.github\workflows\ci.yml = .github\workflows\ci.yml
 		Directory.Build.props = Directory.Build.props
 		Linter.targets = Linter.targets
+		Packaging.targets = Packaging.targets
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EasyDesk.Testing.UnitTests", "test\EasyDesk.Testing.UnitTests\EasyDesk.Testing.UnitTests.csproj", "{A9E00845-3166-4192-8215-3010B15338D7}"
