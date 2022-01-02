@@ -1,7 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
     <Authors>Francesco Dente, Luca Deluigi</Authors>
     <Company>EasyDesk</Company>
     <Description>A set of utilities that can be used to simplify automated test writing.</Description>
@@ -9,8 +8,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="EasyDesk.Tools" Version="1.3.2" />
-    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="5.0.2" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.0" />
+    <PackageReference Include="EasyDesk.Tools" Version="3.0.0" />
     <PackageReference Include="NSubstitute" Version="4.2.2" />
   </ItemGroup>
 
@@ -18,6 +17,6 @@
     <RootFolder>..\..</RootFolder>
   </PropertyGroup>
 
-  <Import Project="$(RootFolder)\Packaging.targets"/>
+  <Import Project="$(RootFolder)\Packaging.targets" />
 
 </Project>
