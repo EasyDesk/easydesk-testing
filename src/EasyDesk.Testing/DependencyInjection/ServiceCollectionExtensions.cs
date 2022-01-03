@@ -1,16 +1,15 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using NSubstitute;
 
-namespace EasyDesk.Testing.DependencyInjection
+namespace EasyDesk.Testing.DependencyInjection;
+
+public static class ServiceCollectionExtensions
 {
-    public static class ServiceCollectionExtensions
+    public static T AddSubstituteFor<T>(this IServiceCollection services, params object[] constructorArguments)
+        where T : class
     {
-        public static T AddSubstituteFor<T>(this IServiceCollection services, params object[] constructorArguments)
-            where T : class
-        {
-            var substitute = Substitute.For<T>(constructorArguments);
-            services.AddSingleton(substitute);
-            return substitute;
-        }
+        var substitute = Substitute.For<T>(constructorArguments);
+        services.AddSingleton(substitute);
+        return substitute;
     }
 }
