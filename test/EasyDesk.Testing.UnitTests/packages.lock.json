@@ -29,12 +29,12 @@
       },
       "Verify.Xunit": {
         "type": "Direct",
-        "requested": "[19.4.2, )",
-        "resolved": "19.4.2",
-        "contentHash": "pvvwUgHNXBR4n8xK2Oi13sf5+g5K7UqnjSg487kq5bq2dSkSzT4LehYt3hLWOw6BFiZzMmv9JVn+dTeM+1O/jA==",
+        "requested": "[19.5.0, )",
+        "resolved": "19.5.0",
+        "contentHash": "tYXahRzYzqXGFg0KkWm9PgSRpRj7j16ul1tuXOqa4uEIV2vUy5Ywg7+JNAEtJzuZn/jZatvzMfr9yo3iP8Dm1A==",
         "dependencies": {
           "EmptyFiles": "4.1.0",
-          "Verify": "19.4.2",
+          "Verify": "19.5.0",
           "xunit.abstractions": "2.0.3",
           "xunit.extensibility.execution": "2.4.2"
         }
@@ -1115,8 +1115,8 @@
       },
       "Verify": {
         "type": "Transitive",
-        "resolved": "19.4.2",
-        "contentHash": "9YO+xEGCTQ71OBhEdkQgMA5NVFd/DMDhds5gbIaHmBfZr+qugfz5FF+UhpDtjRlP3bQN7H70CySgbh2FPKbPdQ==",
+        "resolved": "19.5.0",
+        "contentHash": "ntyRBxtFvOjADiMD3LjYaASHCSCfL34zX6vSRfUKcJlswfRU9jnL6PIY6cGhuKdCrU5sNpB3ZxevCprxDvGzAw==",
         "dependencies": {
           "Argon": "0.1.0",
           "DiffEngine": "11.0.0",
@@ -1176,7 +1176,7 @@
           "Microsoft.Extensions.DependencyInjection": "[7.0.0, )",
           "NSubstitute": "[4.4.0, )",
           "Shouldly": "[4.1.0, )",
-          "Verify": "[19.4.2, )"
+          "Verify": "[19.5.0, )"
         }
       }
     }
