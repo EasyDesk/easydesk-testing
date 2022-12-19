@@ -128,7 +128,7 @@ csharp_style_allow_blank_lines_between_consecutive_braces_experimental = true
 csharp_style_allow_embedded_statements_on_same_line_experimental = true
 
 # Namespace style preferences
-csharp_style_namespace_declarations=file_scoped
+csharp_style_namespace_declarations=file_scoped:warning
 
 #### C# Formatting Rules ####
 
@@ -316,9 +316,9 @@ dotnet_diagnostic.SA1402.severity=none
 dotnet_diagnostic.SA1412.severity=none
 dotnet_diagnostic.SA1413.severity=none
 dotnet_diagnostic.SA1414.severity=none
-dotnet_diagnostic.SA1600.severity=suggestion
-dotnet_diagnostic.SA1601.severity=suggestion
-dotnet_diagnostic.SA1602.severity=suggestion
+dotnet_diagnostic.SA1600.severity=silent
+dotnet_diagnostic.SA1601.severity=silent
+dotnet_diagnostic.SA1602.severity=silent
 
 # IDE0022: Use expression body for methods
 dotnet_diagnostic.IDE0022.severity = none
