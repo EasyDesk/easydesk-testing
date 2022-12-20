@@ -35,19 +35,26 @@ public class VerifyConfigurationTests
     private record CustomErrorInside(string AnotherField) : Error;
 
     [Fact]
-    public Task VerifyErrorConversionTest()
+    public Task VerifyErrorConversionTestCustom()
     {
-        return Verify(new
-        {
-            Custom = new CustomError(42, new CustomErrorInside("hello")),
-            MultiEmpty = new MultiError(new CustomError(42, new CustomErrorInside("hello")), ImmutableHashSet.Create<Error>()),
-            Multi = new MultiError(
+        return Verify(new CustomError(42, new CustomErrorInside("hello")));
+    }
+
+    [Fact]
+    public Task VerifyErrorConversionTestMultiEmpty()
+    {
+        return Verify(new MultiError(new CustomError(42, new CustomErrorInside("hello")), ImmutableHashSet.Create<Error>()));
+    }
+
+    [Fact]
+    public Task VerifyErrorConversionTestMulti()
+    {
+        return Verify(new MultiError(
                 new CustomError(42, new CustomErrorInside("hello")),
                 ImmutableHashSet.Create<Error>(
                     new CustomErrorInside("asd"),
                     new CustomError(
                         123,
-                        new CustomErrorInside("world")))),
-        });
+                        new CustomErrorInside("world")))));
     }
 }
