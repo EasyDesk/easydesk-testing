@@ -1,4 +1,5 @@
 ﻿using EasyDesk.Tools;
+using System.Linq;
 using VerifyTests;
 
 namespace EasyDesk.Testing.VerifyConfiguration;
@@ -23,7 +24,7 @@ public class ErrorConverter : WriteOnlyJsonConverter<Error>
             writer.Serialize(multiError.PrimaryError);
             writer.WritePropertyName("Secondary");
             writer.WriteStartArray();
-            foreach (var subError in multiError.SecondaryErrors)
+            foreach (var subError in multiError.SecondaryErrors.OrderBy(e => (e.GetType().Name, e.GetHashCode())))
             {
                 writer.Serialize(subError);
             }
