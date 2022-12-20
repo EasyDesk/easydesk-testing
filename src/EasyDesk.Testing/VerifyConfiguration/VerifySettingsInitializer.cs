@@ -11,6 +11,7 @@ public static class VerifySettingsInitializer
         {
             settings.Converters.Add(new OptionConverter());
             settings.Converters.Add(new NoneOptionConverter());
+            settings.Converters.Add(new ErrorConverter());
             settings.NullValueHandling = NullValueHandling.Include;
             settings.DefaultValueHandling = DefaultValueHandling.Include;
         });
