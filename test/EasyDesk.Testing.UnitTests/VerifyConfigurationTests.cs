@@ -57,4 +57,10 @@ public class VerifyConfigurationTests
                         123,
                         new CustomErrorInside("world")))));
     }
+
+    [Fact]
+    public Task EmptyCollectionConversionTest()
+    {
+        return Verify(new { Inner = new List<int>() });
+    }
 }
