@@ -1,5 +1,6 @@
 ﻿using EasyDesk.Testing.VerifyConfiguration;
 using EasyDesk.Tools;
+using Newtonsoft.Json;
 using System.Collections.Immutable;
 using System.Runtime.CompilerServices;
 using static EasyDesk.Tools.StaticImports;
@@ -62,5 +63,11 @@ public class VerifyConfigurationTests
     public Task EmptyCollectionConversionTest()
     {
         return Verify(new { Inner = new List<int>() });
+    }
+
+    [Fact]
+    public Task NewtonsoftJsonTest()
+    {
+        return Verify(JsonConvert.DeserializeObject("{\"a\": [1, 2, 3]}"));
     }
 }

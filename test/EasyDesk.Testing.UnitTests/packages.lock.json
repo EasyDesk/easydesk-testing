@@ -220,8 +220,8 @@
       },
       "Newtonsoft.Json": {
         "type": "Transitive",
-        "resolved": "13.0.1",
-        "contentHash": "ppPFpBcvxdsfUonNcvITKqLl3bqxWbDCZIzDWHzjpdAHRFfZe0Dw9HmA0+za13IdyrgJwpkDTDA9fHaxOrt20A=="
+        "resolved": "13.0.2",
+        "contentHash": "R2pZ3B0UjeyHShm9vG+Tu0EBb2lC8b0dFzV9gVn50ofHXh9Smjk6kTn7A/FdAsC8B5cKib1OnGYOXxRBz5XQDg=="
       },
       "NSubstitute": {
         "type": "Transitive",
@@ -1133,6 +1133,16 @@
           "SimpleInfoName": "2.0.0"
         }
       },
+      "Verify.NewtonsoftJson": {
+        "type": "Transitive",
+        "resolved": "1.0.0",
+        "contentHash": "rirjFZ3ywYcBsqRiDS30ZthYdpTVQb4dluVKoWemZUTRux1aF/7T5vAkWqo48r9+OQiJKPhWYOVj4znqAEwQZw==",
+        "dependencies": {
+          "Argon": "0.1.0",
+          "Newtonsoft.Json": "13.0.2",
+          "Verify": "19.5.0"
+        }
+      },
       "xunit.abstractions": {
         "type": "Transitive",
         "resolved": "2.0.3",
@@ -1185,7 +1195,8 @@
           "Microsoft.Extensions.DependencyInjection": "[7.0.0, )",
           "NSubstitute": "[4.4.0, )",
           "Shouldly": "[4.1.0, )",
-          "Verify": "[19.5.0, )"
+          "Verify": "[19.5.0, )",
+          "Verify.NewtonsoftJson": "[1.0.0, )"
         }
       }
     }

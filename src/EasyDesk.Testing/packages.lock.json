@@ -68,6 +68,17 @@
           "SimpleInfoName": "2.0.0"
         }
       },
+      "Verify.NewtonsoftJson": {
+        "type": "Direct",
+        "requested": "[1.0.0, )",
+        "resolved": "1.0.0",
+        "contentHash": "rirjFZ3ywYcBsqRiDS30ZthYdpTVQb4dluVKoWemZUTRux1aF/7T5vAkWqo48r9+OQiJKPhWYOVj4znqAEwQZw==",
+        "dependencies": {
+          "Argon": "0.1.0",
+          "Newtonsoft.Json": "13.0.2",
+          "Verify": "19.5.0"
+        }
+      },
       "Argon": {
         "type": "Transitive",
         "resolved": "0.1.0",
@@ -128,6 +139,11 @@
           "System.Security.AccessControl": "5.0.0",
           "System.Security.Principal.Windows": "5.0.0"
         }
+      },
+      "Newtonsoft.Json": {
+        "type": "Transitive",
+        "resolved": "13.0.2",
+        "contentHash": "R2pZ3B0UjeyHShm9vG+Tu0EBb2lC8b0dFzV9gVn50ofHXh9Smjk6kTn7A/FdAsC8B5cKib1OnGYOXxRBz5XQDg=="
       },
       "SimpleInfoName": {
         "type": "Transitive",
