@@ -1,6 +1,7 @@
 ﻿using EasyDesk.Testing.VerifyConfiguration;
 using EasyDesk.Tools;
 using Newtonsoft.Json;
+using NodaTime;
 using System.Collections.Immutable;
 using System.Runtime.CompilerServices;
 using static EasyDesk.Tools.StaticImports;
@@ -69,5 +70,16 @@ public class VerifyConfigurationTests
     public Task NewtonsoftJsonTest()
     {
         return Verify(JsonConvert.DeserializeObject("{\"a\": [1, 2, 3]}"));
+    }
+
+    [Fact]
+    public Task NodaTimeTest()
+    {
+        return Verify(new
+        {
+            LocalDate = new LocalDate(1994, 3, 1),
+            LocalTime = new LocalTime(14, 25),
+            Duration = Duration.FromHours(13),
+        });
     }
 }

@@ -16,6 +16,9 @@ public static class VerifySettingsInitializer
             settings.NullValueHandling = NullValueHandling.Include;
             settings.DefaultValueHandling = DefaultValueHandling.Include;
         });
+
         VerifierSettings.DontIgnoreEmptyCollections();
+
+        VerifyNodaTime.Enable();
     }
 }
