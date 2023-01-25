@@ -5,7 +5,7 @@ namespace EasyDesk.Testing.VerifyConfiguration;
 
 internal abstract class JsonConverterFactory : JsonConverter
 {
-    public override object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer)
+    public override object? ReadJson(JsonReader reader, Type objectType, object? existingValue, JsonSerializer serializer)
     {
         return CreateConverter(objectType, serializer).ReadJson(reader, objectType, existingValue, serializer);
     }

@@ -19,7 +19,7 @@ public abstract class DependencyInjectionTestBase : IDisposable
 
     protected abstract void ConfigureServices(IServiceCollection services);
 
-    protected T Service<T>() => ServiceProvider.GetRequiredService<T>();
+    protected T Service<T>() where T : notnull => ServiceProvider.GetRequiredService<T>();
 
     public virtual void Dispose()
     {

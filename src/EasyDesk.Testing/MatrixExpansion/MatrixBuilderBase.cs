@@ -38,7 +38,7 @@ public abstract class MatrixBuilderBase<T, TBuilder>
     {
         _expansions = _expansions.Pop(out var expansion);
         _expansions = _expansions.Push(ps => FilteredExpansion(ps, expansion, predicate));
-        return this as TBuilder;
+        return (TBuilder)this;
     }
 
     private IEnumerable FilteredExpansion(IEnumerable<object> currentParams, Expansion expansion, Func<T, bool> predicate)

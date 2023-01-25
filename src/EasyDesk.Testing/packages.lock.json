@@ -4,9 +4,9 @@
     "net7.0": {
       "EasyDesk.Tools": {
         "type": "Direct",
-        "requested": "[7.6.1, )",
-        "resolved": "7.6.1",
-        "contentHash": "81+OZdKYPWzW9fdG55gvLzNFktX29d+oe6moJD0gHYo9K4CW28/CJPe7uIeVUPn2J2eN9zgmgIfxBUtlE8DHEQ=="
+        "requested": "[8.0.0, )",
+        "resolved": "8.0.0",
+        "contentHash": "Gr5FUoYNbFIZU+igIpys4fFpHyp5z7oYUL7eP1WfC8LeY8WTIIuiGRsfdxihXIBo1YEtr3Z1YJsRUkCyAp8bMw=="
       },
       "Microsoft.Extensions.DependencyInjection": {
         "type": "Direct",
@@ -58,14 +58,14 @@
       },
       "Verify": {
         "type": "Direct",
-        "requested": "[19.5.0, )",
-        "resolved": "19.5.0",
-        "contentHash": "ntyRBxtFvOjADiMD3LjYaASHCSCfL34zX6vSRfUKcJlswfRU9jnL6PIY6cGhuKdCrU5sNpB3ZxevCprxDvGzAw==",
+        "requested": "[19.7.1, )",
+        "resolved": "19.7.1",
+        "contentHash": "Pm7bWHyay4s5/8TGsqVgeu0i0XHnYRvTwfAE1yFMmtFpfhymIcUYiuQ/5kucsXyocpeG9mxeYOETj1cQMx/BVg==",
         "dependencies": {
-          "Argon": "0.1.0",
-          "DiffEngine": "11.0.0",
+          "Argon": "0.2.1",
+          "DiffEngine": "11.1.0",
           "EmptyFiles": "4.1.0",
-          "SimpleInfoName": "2.0.0"
+          "SimpleInfoName": "2.1.0"
         }
       },
       "Verify.NewtonsoftJson": {
@@ -92,8 +92,8 @@
       },
       "Argon": {
         "type": "Transitive",
-        "resolved": "0.1.0",
-        "contentHash": "TYJwenjm6RTjs3hEphb4mL3h4jdSMWSvoRkuNRGXXD6ZcuMNWOR4UTzf6OGF+ReTYsE2c1Q3brLSD3cfIPjfdw=="
+        "resolved": "0.2.1",
+        "contentHash": "u+nKsl9XXOr6ZS2VrEUwEgJyp2O+rBMyVZ/du03U8Boab4mpSZCLL3+YrzuacsVQv5xKZQhH0nCojZk+bw8L9A=="
       },
       "Argon.NodaTime": {
         "type": "Transitive",
@@ -114,10 +114,10 @@
       },
       "DiffEngine": {
         "type": "Transitive",
-        "resolved": "11.0.0",
-        "contentHash": "FKhanyE6mYmPe/MWWKKHc7Ol6WECHsE+WN6tK1L5FksrZd+DG4UMsc2luunnuUkVZ6bXi0XO6nyuy6HSXDmkiw==",
+        "resolved": "11.1.0",
+        "contentHash": "3h07x0TNZSGY+SVjjKWJq26eGrph2gzSuVJjtld5KteGpan3wTzku6c78NikNvJI3KY1wYyZ0DNYNM9sB4GvQQ==",
         "dependencies": {
-          "EmptyFiles": "4.0.0",
+          "EmptyFiles": "4.1.0",
           "System.Management": "5.0.0"
         }
       },
@@ -175,8 +175,8 @@
       },
       "SimpleInfoName": {
         "type": "Transitive",
-        "resolved": "2.0.0",
-        "contentHash": "sXzz3+zns3HWmv+8wzhF1f4up8NjXHeD1X7w9zBjmnpwMk08zuCw5PPmZUAv8ou6F0AgG/8QpvZQr4hC82Wwqg=="
+        "resolved": "2.1.0",
+        "contentHash": "N6pwZI8i3yFje7IiQk17y40dIxh01PWLlIhDGthziJ3+olLmcWiu/Q6a6eppYopRQhD3WW/OlmAGMBXJ8IH/9Q=="
       },
       "StyleCop.Analyzers.Unstable": {
         "type": "Transitive",

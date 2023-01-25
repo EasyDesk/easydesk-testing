@@ -11,7 +11,7 @@ internal class OptionConverter : JsonConverterFactory
     {
         var optionType = objectType.GetGenericArguments()[0];
         var converterType = typeof(OptionConverterImpl<>).MakeGenericType(optionType);
-        return Activator.CreateInstance(converterType) as JsonConverter;
+        return (JsonConverter)Activator.CreateInstance(converterType)!;
     }
 
     public override bool CanConvert(Type objectType) =>
