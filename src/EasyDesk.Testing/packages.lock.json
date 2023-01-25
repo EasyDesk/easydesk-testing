@@ -4,9 +4,9 @@
     "net7.0": {
       "EasyDesk.Tools": {
         "type": "Direct",
-        "requested": "[8.0.0, )",
-        "resolved": "8.0.0",
-        "contentHash": "Gr5FUoYNbFIZU+igIpys4fFpHyp5z7oYUL7eP1WfC8LeY8WTIIuiGRsfdxihXIBo1YEtr3Z1YJsRUkCyAp8bMw=="
+        "requested": "[8.0.2, )",
+        "resolved": "8.0.2",
+        "contentHash": "mt/kcnR3xABfdRDFXsBaI1FKljWt4mnTriLKOaOTcDNYbGrnPl7l1PEh5eP4hLQaD2ELiYHobBkxcq5HkjleRw=="
       },
       "Microsoft.Extensions.DependencyInjection": {
         "type": "Direct",

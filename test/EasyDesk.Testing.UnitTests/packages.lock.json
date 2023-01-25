@@ -98,8 +98,8 @@
       },
       "EasyDesk.Tools": {
         "type": "Transitive",
-        "resolved": "8.0.0",
-        "contentHash": "Gr5FUoYNbFIZU+igIpys4fFpHyp5z7oYUL7eP1WfC8LeY8WTIIuiGRsfdxihXIBo1YEtr3Z1YJsRUkCyAp8bMw=="
+        "resolved": "8.0.2",
+        "contentHash": "mt/kcnR3xABfdRDFXsBaI1FKljWt4mnTriLKOaOTcDNYbGrnPl7l1PEh5eP4hLQaD2ELiYHobBkxcq5HkjleRw=="
       },
       "EmptyFiles": {
         "type": "Transitive",
@@ -1223,7 +1223,7 @@
       "easydesk.testing": {
         "type": "Project",
         "dependencies": {
-          "EasyDesk.Tools": "[8.0.0, )",
+          "EasyDesk.Tools": "[8.0.2, )",
           "Microsoft.Extensions.DependencyInjection": "[7.0.0, )",
           "NSubstitute": "[4.4.0, )",
           "Shouldly": "[4.1.0, )",
