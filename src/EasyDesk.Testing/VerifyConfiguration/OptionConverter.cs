@@ -18,6 +18,7 @@ internal class OptionConverter : JsonConverterFactory
         objectType.IsGenericType && objectType.GetGenericTypeDefinition() == typeof(Option<>);
 
     private class OptionConverterImpl<T> : JsonConverter<Option<T>>
+        where T : notnull
     {
         public override void WriteJson(JsonWriter writer, Option<T> value, JsonSerializer serializer)
         {
